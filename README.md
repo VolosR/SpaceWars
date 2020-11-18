@@ -7,5 +7,5 @@ on any ESP32 based board and tft display. Used library for TFT Display is https:
 Here is video about this game 
 https://youtu.be/KZMkGDyGjxQ
 
-![GitHub Logo](/tuumb.jpg)
+![GitHub Logo](/tuumb.JPG)
 Format: ![Alt Text](url)
