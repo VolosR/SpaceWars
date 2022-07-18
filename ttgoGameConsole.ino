@@ -18,7 +18,7 @@
 
 
 
-#include <Tone32.h>
+#include "pitches.h"
 
 #define BUZZER_PIN 27
 #define BUZZER_CHANNEL 0
@@ -355,8 +355,8 @@ if(digitalRead(2)==0 and  x>0) //Move right
       {
         tft.pushImage(buletX[j], buletY[j],  12, 12, ex2);
            if(sound==1){
-           tone(BUZZER_PIN, NOTE_C5, 12, BUZZER_CHANNEL);
-           noTone(BUZZER_PIN, BUZZER_CHANNEL);} else{delay(12);}
+           tone(BUZZER_PIN, NOTE_C5, 12);
+           noTone(BUZZER_PIN);} else{delay(12);}
            tft.fillRect(buletX[j], buletY[j],12,12,TFT_BLACK);
         buletX[j]=-50;
         brojac=brojac+1;
@@ -369,12 +369,12 @@ if(digitalRead(2)==0 and  x>0) //Move right
          
          if(eHealth<=0){
           tft.pushImage(ex, ey,  55, 55, buum);
-          tone(BUZZER_PIN, NOTE_E4, 100, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_D4, 80, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_G5, 100, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_C3, 80, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_F4, 280, BUZZER_CHANNEL);
-         noTone(BUZZER_PIN, BUZZER_CHANNEL);
+          tone(BUZZER_PIN, NOTE_E4, 100);
+          tone(BUZZER_PIN, NOTE_D4, 80);
+          tone(BUZZER_PIN, NOTE_G5, 100);
+          tone(BUZZER_PIN, NOTE_C3, 80);
+          tone(BUZZER_PIN, NOTE_F4, 280);
+         noTone(BUZZER_PIN);
          delay(700);
          newLevel();}
          digitalWrite(25,1);
@@ -393,8 +393,8 @@ if(digitalRead(2)==0 and  x>0) //Move right
       {
         tft.pushImage(rocketX[j], rocketY[j],  24, 24, explosion);
            if(sound==1){
-           tone(BUZZER_PIN, NOTE_C3, 40, BUZZER_CHANNEL);
-         noTone(BUZZER_PIN, BUZZER_CHANNEL);
+           tone(BUZZER_PIN, NOTE_C3, 40);
+         noTone(BUZZER_PIN);
            }else {delay(40);}
          tft.fillRect(rocketX[j], rocketY[j],24,24,TFT_BLACK);
         //delay(30);
@@ -410,12 +410,12 @@ if(digitalRead(2)==0 and  x>0) //Move right
          
          if(eHealth<=0){
           tft.pushImage(ex, ey,  55, 55, buum);
-          tone(BUZZER_PIN, NOTE_E4, 100, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_D4, 80, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_G5, 100, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_C3, 80, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_F4, 280, BUZZER_CHANNEL);
-         noTone(BUZZER_PIN, BUZZER_CHANNEL);
+          tone(BUZZER_PIN, NOTE_E4, 100);
+          tone(BUZZER_PIN, NOTE_D4, 80);
+          tone(BUZZER_PIN, NOTE_G5, 100);
+          tone(BUZZER_PIN, NOTE_C3, 80);
+          tone(BUZZER_PIN, NOTE_F4, 280);
+         noTone(BUZZER_PIN);
          delay(700);
          newLevel();}
          digitalWrite(25,0);
@@ -437,12 +437,12 @@ if(digitalRead(2)==0 and  x>0) //Move right
          lives--;
          if(lives==0){
            tft.pushImage(x, y,  55, 55, buum);
-          tone(BUZZER_PIN, NOTE_G4, 100, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_B4, 80, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_C5, 100, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_A4, 80, BUZZER_CHANNEL);
-          tone(BUZZER_PIN, NOTE_F4, 280, BUZZER_CHANNEL);
-         noTone(BUZZER_PIN, BUZZER_CHANNEL);
+          tone(BUZZER_PIN, NOTE_G4, 100);
+          tone(BUZZER_PIN, NOTE_B4, 80);
+          tone(BUZZER_PIN, NOTE_C5, 100);
+          tone(BUZZER_PIN, NOTE_A4, 80);
+          tone(BUZZER_PIN, NOTE_F4, 280);
+         noTone(BUZZER_PIN);
          delay(500);
           tft.fillScreen(TFT_BLACK);
           fase=2;}
@@ -451,8 +451,8 @@ if(digitalRead(2)==0 and  x>0) //Move right
          digitalWrite(33,1);
          blinkTime=1;
          if(sound==1){
-         tone(BUZZER_PIN, NOTE_C6, 4, BUZZER_CHANNEL);
-         noTone(BUZZER_PIN, BUZZER_CHANNEL);}else {delay(4);}
+         tone(BUZZER_PIN, NOTE_C6, 4);
+         noTone(BUZZER_PIN);}else {delay(4);}
          
         }
     
